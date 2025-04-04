@@ -92,6 +92,8 @@ DeviceLogonEvents
 
   **Result:** No successful logins from these IPs were detected.
 
+  ![Image](https://github.com/user-attachments/assets/34b02096-b75f-445f-a918-34f6c39d0298)
+
 #### Analysis Steps:
 1. **Review Patterns:**
    - Investigated failed login thresholds in Azure AD logs.
@@ -168,7 +170,7 @@ After clicking **"Scheduled query rule"**, you’ll see the **Analytics rule det
      - **🎯 Initial Access**
      - **🔑 Credential Access**
       
-![Screenshot 2025-01-14 103734](https://github.com/user-attachments/assets/f6558c4d-585b-4e63-b787-1cc071cc0ad0)
+![Image](https://github.com/user-attachments/assets/d38e1bc4-3183-4261-a136-497fabc8288f)
 
 5. **Rule type**:  
    - Select **Scheduled 🕒**.
@@ -191,7 +193,13 @@ DeviceLogonEvents
 | summarize NumberOfFailures = count() by RemoteIP, ActionType, DeviceName
 | where NumberOfFailures >= 10s
 ```
-![Screenshot 2025-01-14 111832](https://github.com/user-attachments/assets/b1164c0f-6022-444e-a409-43c1d4e9a579)
+![Image](https://github.com/user-attachments/assets/3ebf7b0b-e518-4356-b83d-f0789d392957)
+
+![Image](https://github.com/user-attachments/assets/beead357-efd7-4157-9e62-ff2d6e6d1ec1)
+
+![Image](https://github.com/user-attachments/assets/df589747-dc44-43a6-bff0-3322f1aaaf5f)
+
+![Image](https://github.com/user-attachments/assets/3a258d35-95e6-412f-9e38-974c1c042fc8)
 
 - 🛠️ This query filters **sign-in logs** for failed login attempts and identifies unusual patterns.  
 - 💡 Adjust thresholds based on your environment (e.g., `> 5 failed attempts`).
