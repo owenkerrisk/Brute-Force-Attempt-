@@ -69,7 +69,7 @@ DeviceLogonEvents
 | summarize NumberOfFailures = count() by RemoteIP, ActionType, DeviceName
 | where NumberOfFailures >= 10
 ```
-![Image](https://github.com/user-attachments/assets/6afc2394-cfa0-47ef-927d-a9af6f976587)
+![Image](https://github.com/user-attachments/assets/35c1026b-b630-4a08-bc82-0e73b2dc478f)
 
 - **Nine Azure VMs** were targeted by brute force attempts from **multiple public IPs**:
   
